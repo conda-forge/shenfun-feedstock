@@ -1,6 +1,6 @@
 {% set build = 0 %}
 {% set name = "shenfun" %}
-{% set version = "2.0.0" %}
+{% set version = "2.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/spectralDNS/shenfun/archive/{{ version }}.tar.gz
-  sha256: 7b07581910fefaf74c0ca5bab49b75e21b0391bb921e174445b7a77bf93dac31
+  sha256: 3ed5789a0f5b11cdebbca18f0604a5c9bd15e1d7ebe2c134c413c4c2318e3760
 
 build:
   number: {{ build }}
@@ -32,7 +32,7 @@ requirements:
     - scipy
     - fftw
     - mpi4py
-    - mpi4py-fft
+    - mpi4py-fft 2.0.1
     - sympy
     - hdf5 * mpi_*
     - h5py * mpi_*

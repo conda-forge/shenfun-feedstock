@@ -1,4 +1,4 @@
-{% set build = 0 %}
+{% set build = 1 %}
 {% set name = "shenfun" %}
 {% set version = "2.0.6" %}
 

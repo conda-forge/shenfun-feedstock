@@ -1,6 +1,6 @@
 {% set build = 0 %}
 {% set name = "shenfun" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://github.com/spectralDNS/shenfun/archive/{{ version }}.tar.gz
-  sha256: e063e80ed869aa43f537c8906803513042a36cf5176e408f006c6fd84c0996d7
+  sha256: c1ebd510e9c457e37b0e90dcaa394c96d7df4523106b89b8a354dadf57df4bc9
 
 build:
   number: {{ build }}
-  skip: True  # [win]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  skip: true  # [win]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   build:
@@ -42,7 +42,7 @@ about:
   license: BSD 2-clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'High performance computational platform for the spectral Galerkin method'
+  summary: High performance computational platform for the spectral Galerkin method
   description: |
     Shenfun is a high performance computing platform for solving partial
     differential equations (PDEs) by the spectral Galerkin method. The platform

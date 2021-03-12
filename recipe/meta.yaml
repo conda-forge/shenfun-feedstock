@@ -1,6 +1,6 @@
 {% set build = 0 %}
 {% set name = "shenfun" %}
-{% set version = "3.0.7" %}
+{% set version = "3.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/spectralDNS/shenfun/archive/{{ version }}.tar.gz
-  sha256: 128cff375a72d60a317d3deff5af2a1efe5b7a2ffd4bdaee38ffc32914cef22a
+  sha256: 2b728c26e27e3c1221902505ba511d14629c0656fe8b94e5b19f57bb6f0d2c06
 
 build:
   number: {{ build }}

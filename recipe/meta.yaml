@@ -30,6 +30,7 @@ requirements:
     - python
     - {{ pin_compatible('numpy') }}
     - scipy
+    - pyyaml
     - fftw
     - mpi4py
     - mpi4py-fft >=2.0.3

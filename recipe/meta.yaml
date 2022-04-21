@@ -21,7 +21,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ mpi }}                              # [build_platform != target_platform and mpi == "openmpi"]
+    - {{ mpi }}                              # [mpi == "openmpi"]
   host:
     - numpy
     - setuptools
@@ -29,6 +29,7 @@ requirements:
     - cython
     - fftw
     - pip
+    - {{ mpi }}                              # [mpi == "openmpi"]
   run:
     - python
     - {{ pin_compatible('numpy') }}
@@ -37,7 +38,6 @@ requirements:
     - fftw
     - mpi4py
     - mpi4py-fft >=2.0.3
-    - mpich
     - sympy
     - hdf5 * mpi_*
     - h5py * mpi_*

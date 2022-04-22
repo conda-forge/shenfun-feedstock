@@ -1,7 +1,6 @@
 {% set build = 0 %}
 {% set name = "shenfun" %}
 {% set version = "4.0.1" %}
-{% set mpi = mpi or 'mpich' %}
 
 package:
   name: {{ name|lower }}
@@ -36,7 +35,7 @@ requirements:
     - fftw
     - mpi4py
     - mpi4py-fft >=2.0.3
-    - {{ mpi }}
+    - mpich
     - sympy
     - hdf5 * mpi_*
     - h5py * mpi_*

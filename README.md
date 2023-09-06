@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/shenfun-feedsto
 
 Home: https://github.com/spectralDNS/shenfun
 
-Package license: BSD 2-clause
+Package license: BSD 2-Clause
 
 Summary: High performance computational platform for the spectral Galerkin method
 
@@ -25,7 +25,7 @@ Current build status
 
 
 <table>
-    
+
   <tr>
     <td>Azure</td>
     <td>

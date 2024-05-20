@@ -1,4 +1,4 @@
-{% set build = 2 %}
+{% set build = 3 %}
 {% set name = "shenfun" %}
 {% set version = "4.1.4" %}
 
@@ -26,6 +26,7 @@ requirements:
     - pip                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - numpy
@@ -36,7 +37,6 @@ requirements:
     - pip
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     - scipy
     - pyyaml
     - fftw

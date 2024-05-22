@@ -1,6 +1,6 @@
-{% set build = 3 %}
+{% set build = 0 %}
 {% set name = "shenfun" %}
-{% set version = "4.1.4" %}
+{% set version = "4.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/spectralDNS/shenfun/archive/{{ version }}.tar.gz
-  sha256: cf43fef47a73628980a0f5c8c9abf15b103cf291ca72578ad32c121c91587ca2
+  sha256: 40bec648c032cfb701f5d83424c230df97bf507b4b23b861dbd56644bc20a496
 
 build:
   number: {{ build }}
@@ -21,7 +21,7 @@ requirements:
     - numpy                               # [build_platform != target_platform]
     - setuptools                          # [build_platform != target_platform]
     - python                              # [build_platform != target_platform]
-    - cython <3.0                         # [build_platform != target_platform]
+    - cython                              # [build_platform != target_platform]
     - fftw                                # [build_platform != target_platform]
     - pip                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}  # [build_platform != target_platform]
@@ -32,7 +32,7 @@ requirements:
     - numpy
     - setuptools
     - python
-    - cython <3.0
+    - cython  
     - fftw
     - pip
   run:
@@ -44,6 +44,7 @@ requirements:
     - mpi4py-fft >=2.0.5
     - mpich
     - sympy
+    - numba
     - hdf5 * mpi_*
     - h5py * mpi_*
     - netcdf4 * mpi_*
